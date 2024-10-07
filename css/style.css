@@ -149,6 +149,7 @@ body {
 .header-sticky {
   background-color: #7C97E3;
   padding: 15px 0;
+  z-index: 999;
 }
 
 .menu {
@@ -825,7 +826,12 @@ body {
   .portfolio__link:hover {
     color: #fff;
     box-shadow: 0 0 0 3px rgb(44, 42, 165);
+    z-index: 0;
   }
+
+  .portfolio__link:not(:hover) {
+    z-index: 0; 
+}
 
   .portfolio__link:hover::before {
     background-color: rgba(35, 82, 222, 0.50);
